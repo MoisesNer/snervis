@@ -1,0 +1,77 @@
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.hero{
+    /* background: url(https://images.unsplash.com/photo-1517475452665-4e6898befa13?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1482&q=80) center center/cover no-repeat; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+    object-fit: contain;
+}
+
+.hero > h1{
+    color: white;
+    font-size: 100px;
+    margin-top: -100px;
+    text-transform: uppercase;
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.hero > p {
+    margin-top: 50px;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+
+}
+
+.hero-btns{
+    margin-top: 30px;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.hero-btns .btn{
+    margin: 6px;
+}
+
+.fa-play-circle{
+    margin-left: 15px;
+    font-size: larger;
+}
+
+@media screen and (max-width: 960px) {
+    .hero > h1{
+        font-size: 70px;
+        margin-top: -150px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .hero > h1{
+        font-size: 50px;
+        margin-top:-100px;
+    }
+    .hero> p{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 425px){
+    .hero-btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

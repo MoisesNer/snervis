@@ -1,0 +1,45 @@
+:root{
+    --primary: #fff;
+    --secondary: rgb(255, 0, 132);
+    --purple: blueviolet;
+}
+
+.btn{
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn--primar{
+    background-color: var(--primary);
+    color: blueviolet;
+    border: 1px solid var(--primary);
+}
+
+.btn--outline{
+    background-color: transparent;
+    color: blueviolet;
+    padding: 8px 20px;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+}
+
+.btn-medium{
+    padding: 8px 20px;
+    font-size: 20px;
+
+}
+
+.btn--large{
+    padding: 12px 26px;
+    font-size: 20px;
+}
+
+.btn--medium:hover, .btn--large:hover{
+    background: var(--primary);
+    color: rgb(70, 0, 135);
+    transition: all 0.3s ease-out;
+}
