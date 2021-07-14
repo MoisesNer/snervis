@@ -41,7 +41,7 @@
 }
 
 .footer-subscription-text {
- margin-bottom: 24px;
+ margin-bottom: 34px;
  font-size: 20px;
 }
 
@@ -100,7 +100,7 @@
   margin-bottom: 32px;
 }
 
-.footer-imput::placeholder{
+.footer-input::placeholder{
   color: var(--purple);
 }
 
@@ -131,17 +131,9 @@
   width: 240px;
 }
 
-/* .social-logo{
-  color: var(--primary);
-  justify-self: start;
-  margin-left: 20px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-  display: flex;
-  align-self: center;
-  margin-bottom: 16px;
-} */
+.footer-img{
+width: 100px;
+}
 
 .website-rights{
   color: var(--purple);
