@@ -21,9 +21,9 @@
   .home,
   .gallery,
   .biography,
-  .sign-up {
+  .sign-up, .update-profile, .login, .forgot-password {
     display: flex;
-    height: 90vh;
+    height: 60vh;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
@@ -60,14 +60,47 @@
     color: #fff;
     font-size: 100px;
   }
+  .update-profile{
+    background: var(--linearImages),
+    url('./assets/updateProfile.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+  }
+
+  .login{
+    background: var(--linearImages),
+    url('./assets/login.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+  }
+
+  .forgot-password{
+    background: var(--linearImages),
+    url('./assets/forgotPassword.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px
+  }
+
+  .current-user{
+    color: aliceblue;
+  }
 
   @media screen and (max-width: 768px) {
-    .biography{
+    .biography, .forgot-password{
       font-size: 80px;
     }
   }
   @media screen and (max-width: 425px) {
-    .biography{
+    .biography, .forgot-password{
       font-size: 50px;
     }
   }

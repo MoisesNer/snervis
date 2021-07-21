@@ -1,0 +1,119 @@
+:root{
+    --primary: #fff;
+    --secondary: rgb(255, 0, 132);
+    --purple: blueviolet;
+  
+    --typo: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+    --linearImages: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(228, 0, 228, 0.2)
+      );
+  }
+
+.sign-upContainer{
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sign-upWrap{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sign-upForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.updateProfileForm{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.fp-input{
+
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border: 1px solid var(--secondary);
+    width: 100%;
+}
+
+.sign-upInput{
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border: 1px solid var(--secondary);
+}
+
+.sign-upInput::placeholder {
+    color: var(--purple);
+  }
+
+.sign-upText{
+    margin: 20px 0;
+    text-align: center;
+    
+}
+
+.loginText {
+    display: flex;
+    justify-content: center;
+}
+
+.loginText a {
+    color: var(--purple);
+    text-decoration: none;
+    margin-bottom: 8px;
+    margin: auto;
+    text-align: center;
+    font-size: larger;
+  }
+
+.sign-upText a {
+    color: var(--purple);
+    text-decoration: none;
+    margin-bottom: 8px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .footer-link-items a:hover{
+    color: var(--secondary);
+    transition: .3s ease-out;
+  }
+  
+  .btn-dark{
+      background-color: black;
+      padding: 8px 30px;
+      color: var(--secondary);
+      border: 1px solid var(--purple);
+      transition: all 0.3s ease-out;   
+      align-self: center;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+   }
+
+    .btn-dark:hover{
+      background: var(--primary);
+      color: rgb(70, 0, 135);
+      transition: all 0.3s ease-out;
+  }
+
+  .link-cancel{
+      width: 100%;
+  }

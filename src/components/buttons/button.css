@@ -43,3 +43,11 @@
     color: rgb(70, 0, 135);
     transition: all 0.3s ease-out;
 }
+
+.btn--dark{
+    background-color: black;
+    padding: 8px 20px;
+    color: var(--secondary);
+    border: 1px solid var(--purple);
+    transition: all 0.3s ease-out;   
+}

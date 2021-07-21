@@ -1,14 +1,10 @@
 import React, { useRef, useState } from 'react'
-import { Container, Form, Button, Card, Alert } from "react-bootstrap"
+import { Container, Button, Form, Card, Alert } from "react-bootstrap"
 import { Link, useHistory } from 'react-router-dom'
 
 import '../../App.css'
-import { useAuth } from './Context'
-
-// export default function Signup() {
-//     return <h1 className="sign-up">SIGN UP</h1>;
-
-// }
+import './signup.css'
+import { useAuth } from '../../Context'
 
 export default function Signup() {
     const emailRef = useRef()
@@ -39,35 +35,31 @@ export default function Signup() {
     }
     return (
         <>
-            <Container className='d-flex align-items-center justify-content-center' style={{ minHeight: '100vh' }}>
-            <div className='w-100' style={{ maxWidth: '400px' }}>
-            <Card>
-            <Card.Body>
-                <h2 className="text-center mb-4">Sign Up</h2>
-                {error && <Alert variant="danger">{error}</Alert>}
-                <Form onSubmit={handleSubmit}>
-                    <Form.Group id="email">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" ref={emailRef} required />
-                    </Form.Group>
-                    <Form.Group id="password">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" ref={passwordRef} required />
-                    </Form.Group>
-                    <Form.Group id="password-confirm">
-                        <Form.Label>Password Confirmation</Form.Label>
-                        <Form.Control type="password" ref={passwordConfirmRef} required />
-                    </Form.Group>
-                    <Button disabled={loading} className="w-100" type="submit">
-                        Sign Up
-                    </Button>
-                </Form>
-            </Card.Body>
-            </Card>
-            <div className="w-100 text-center mt-2">
-                Already have an account? <Link to='/login'>Log In</Link>
-            </div>
-            </div>
+            <h1 className="sign-up">SIGN UP</h1>
+            <Container className='sign-upContainer'>
+                <div className='sign-upWrap'>
+                    <Card>
+                        <Card.Body>
+                            {error && <Alert variant="danger">{error}</Alert>}
+                            <Form onSubmit={handleSubmit} className='sign-upForm'>
+                                <Form.Group id="email" >
+                                    <Form.Control type="email" ref={emailRef} required placeholder='Enter your email' className='sign-upInput' />
+                                </Form.Group>
+                                <Form.Group id="password">
+                                    <Form.Control type="password" ref={passwordRef} required placeholder='Password' className='sign-upInput' />
+                                </Form.Group>
+                                <Form.Group id="password-confirm">
+                                    <Form.Control type="password" ref={passwordConfirmRef} required placeholder='Password Confirmation' className='sign-upInput' />
+                                </Form.Group>
+                                <Button disabled={loading} className='btn-dark' type="submit">
+                                    Sign Up
+                                </Button>
+                            </Form>
+                        </Card.Body>
+                    </Card>
+                    <div className="sign-upText"> Already have an account? <Link to='/login'>Log In</Link>
+                    </div>
+                </div>
             </Container>
         </>
     )

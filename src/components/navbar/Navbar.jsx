@@ -1,40 +1,57 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import logosmall from '../../assets/sebastianervis_small.png'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import './navbar.css'
 import { Button } from '../buttons/Button';
+import { useAuth } from '../../Context'
 
 function Navbar() {
     const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+    const [button, setButton] = useState(true);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+    //LOG OUT
+    const [error, setError] = useState("")
+    const { currentUser, logout } = useAuth()
+    const history = useHistory()
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
+    async function handleLogOut() {
+        setError('')
+        try {
+            await logout()
+            history.push('/')
+            setClick(false)
+        } catch {
+            setError('Failed to log out')
+        }
     }
-  };
 
-  useEffect(() => {
-    showButton();
-  }, []);
+    //BURGUER
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
 
-  window.addEventListener('resize', showButton);
+    const showButton = () => {
+        if (window.innerWidth <= 960) {
+            setButton(false);
+        } else {
+            setButton(true);
+        }
+    };
+
+    useEffect(() => {
+        showButton();
+    }, []);
+
+    window.addEventListener('resize', showButton);
 
     return (
-
         <>
             <nav className="navbar">
                 <div className="navbar-container">
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                        <img src={logosmall} alt="sebi nervis logo" className='navbar-img'/>
+                        <img src={logosmall} alt="sebi nervis logo" className='navbar-img' />
                     </Link>
                     <div className="navbar-menu" onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-hamburger'}/>
+                        <i className={click ? 'fas fa-times' : 'fas fa-hamburger'} />
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='navbar-item'>
@@ -46,11 +63,31 @@ function Navbar() {
                         <li className='navbar-item'>
                             <Link to='/gallery' className='navbar-links' onClick={closeMobileMenu}>Gallery</Link>
                         </li>
+                        <li className='navbar-item'>
+                            <Link to='/update-profile' className='navbar-links' onClick={closeMobileMenu}>
+                                {(currentUser == null) ?
+                                    '' : currentUser.email
+                                }
+                            </Link>
+                        </li>
                         <li>
-                            <Link to='/sign-up' className='navbar-links-mobile' onClick={closeMobileMenu}>Sign Up</Link>
+                            {(currentUser == null) ?
+                                <Link to='/login' className='navbar-links-mobile' onClick={closeMobileMenu}>LOG IN</Link>
+                                : <Link to='/' className='navbar-links-mobile' onClick={handleLogOut}>LOG OUT</Link>
+                            }
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+
+                    {(currentUser == null) ?
+                        <Link to='/login'>
+                            {button && <Button buttonStyle='btn--outline'>LOGIN</Button>}
+                        </Link>
+                        : 
+                        <Link to='/'>
+                            {button && <Button buttonStyle='btn--outline' onClick={handleLogOut}>LOG OUT</Button>}
+                        </Link>
+                    }
+
                 </div>
             </nav>
         </>

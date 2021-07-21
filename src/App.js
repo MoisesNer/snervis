@@ -8,10 +8,14 @@ import Biography from './components/Pages/Biography'
 import Footer from './components/footer/Footer';
 import Login from './components/Pages/Login'
 import ForgotPassword from './components/Pages/ForgotPassword';
+import UpdateProfile from '../src/components/Pages/UpdateProfile';
+import { AuthProvider } from './Context';
 
 function App() {
   return (
-    <>
+    
+    <AuthProvider>
+
     <Router>
         <Navbar/>
         <Switch>
@@ -21,10 +25,12 @@ function App() {
           <Route path='/gallery' component={Gallery}/>
           <Route path='/login' component={Login}/>
           <Route path='/forgot-password' component={ForgotPassword}/>
+          <Route path='/update-profile' component={UpdateProfile}/>
         </Switch>
         <Footer/>
     </Router>
-    </>
+    </AuthProvider>
+    
   );
 }
 
