@@ -6,14 +6,12 @@ import { Button } from '../buttons/Button';
 import { useAuth } from '../../Context'
 
 function Navbar() {
-    const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
-
+    
     //LOG OUT
     const [error, setError] = useState("")
     const { currentUser, logout } = useAuth()
     const history = useHistory()
-
+    
     async function handleLogOut() {
         setError('')
         try {
@@ -24,8 +22,10 @@ function Navbar() {
             setError('Failed to log out')
         }
     }
-
+    
     //BURGUER
+    const [click, setClick] = useState(false);
+    const [button, setButton] = useState(true);
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 

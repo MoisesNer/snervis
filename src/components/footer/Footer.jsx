@@ -62,7 +62,7 @@ function Footer() {
                             <i className="sidebarIcon fab fa-facebook-square"></i>
                         </a>
                         <a href="https://www.instagram.com/" target='_blank' rel="noreferrer" className='social-icon-link'>
-                            <i class="fab fa-instagram"></i>
+                            <i className="fab fa-instagram"></i>
                         </a>
                         <a href="https://www.linkedin.com/" target='_blank' rel="noreferrer" className='social-icon-link'>
                             <i className="fab fa-linkedin"></i>

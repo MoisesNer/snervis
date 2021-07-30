@@ -45,9 +45,9 @@ export default function UpdateProfile() {
 
     async function handleLogOut() {
         setLogerror('')
-        try{
+        try {
             await logout()
-            history.push('/login')
+            history.push('/')
         } catch {
             setLogerror('Failed to log out')
         }
@@ -61,12 +61,13 @@ export default function UpdateProfile() {
                 <div className='sign-upWrap'>
                     <Card>
                         <Card.Body>
-                            <h2 className="sign-upText">User: {currentUser.email}</h2>
+                            {/* <h2 className="sign-upText">User: {currentUser.email}</h2> */}
+                            <h2 className="sign-upText">User: {(currentUser == null) ? '' : currentUser.email}</h2>
                             {error && <Alert variant="danger">{error}</Alert>}
                             <Form onSubmit={handleSubmit} className="updateProfileForm">
                                 <Form.Group id="email">
                                     <Form.Label>Email: </Form.Label>
-                                    <Form.Control type="email" ref={emailRef} required defaultValue={currentUser.email} className='sign-upInput' />
+                                    <Form.Control type="email" ref={emailRef} required defaultValue={(currentUser == null) ? '' : currentUser.email} className='sign-upInput' />
                                 </Form.Group>
                                 <Form.Group id="password">
                                     <Form.Label>Password: </Form.Label>

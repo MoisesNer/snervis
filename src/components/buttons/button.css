@@ -13,7 +13,7 @@
     text-transform: uppercase;
 }
 
-.btn--primar{
+.btn--primary{
     background-color: var(--primary);
     color: blueviolet;
     border: 1px solid var(--primary);
