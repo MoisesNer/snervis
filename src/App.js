@@ -15,17 +15,16 @@ function App() {
   return (
     
     <AuthProvider>
-
     <Router>
         <Navbar/>
         <Switch>
           <Route path='/' exact component={Home}/>
-          <Route path='/biography' component={Biography}/>
-          <Route path='/sign-up' component={Signup}/>
-          <Route path='/gallery' component={Gallery}/>
-          <Route path='/login' component={Login}/>
-          <Route path='/forgot-password' component={ForgotPassword}/>
-          <Route path='/update-profile' component={UpdateProfile}/>
+          <Route path='/biography' exact component={Biography}/>
+          <Route path='/sign-up' exact component={Signup}/>
+          <Route path='/gallery' exact component={Gallery}/>
+          <Route path='/login' exact component={Login}/>
+          <Route path='/forgot-password' exact component={ForgotPassword}/>
+          <Route path='/update-profile' exact component={UpdateProfile}/>
         </Switch>
         <Footer/>
     </Router>
