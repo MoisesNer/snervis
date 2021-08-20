@@ -31,7 +31,7 @@
 
 /* GRID */
 .gallery-images{
-    margin: 50px 0;
+    margin-top: 5vh;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr 1fr; 
@@ -52,6 +52,14 @@
     .content{
         width: 100%;
     }
+    .gallery-images{
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-areas: 
+          ". . ."
+          ". . ."
+          ". . ."; 
+    }
 }
 @media (max-width: 425px){
     .about-images{
@@ -61,5 +69,12 @@
     .about-images > img{
         margin: 15px 0;
         width: 100%;
+    }
+    .gallery-images{
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas: 
+        ". ."
+        ". ."; 
     }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { AdventureData } from '../../AdventuresData';
+import { AdventureData } from '../../data/AdventuresData';
 import '../../globalStyle.css'
 // import { GalleryData } from '../../GalleryData';
 
@@ -16,6 +16,8 @@ export default function Gallery() {
                 </div>
                 <div className="content">
                     <p>{content}</p>
+                </div>
+            </div>
                     <div className="gallery-images">
                         {images.map((item, index) => {
                             return (
@@ -23,8 +25,6 @@ export default function Gallery() {
                             )
                         })}
                     </div>
-                </div>
-            </div>
         </>
     )
 }

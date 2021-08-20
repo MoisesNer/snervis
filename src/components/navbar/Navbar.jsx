@@ -9,6 +9,7 @@ function Navbar() {
     
     //LOG OUT
     const [error, setError] = useState("")
+    // const [setError] = useState("")
     const { currentUser, logout } = useAuth()
     const history = useHistory()
     
@@ -20,6 +21,7 @@ function Navbar() {
             setClick(false)
         } catch {
             setError('Failed to log out')
+            console.log(error);
         }
     }
     

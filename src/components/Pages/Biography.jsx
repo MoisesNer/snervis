@@ -1,5 +1,5 @@
 import React from 'react'
-import { AdventureData } from '../../AdventuresData';
+import { AdventureData } from '../../data/AdventuresData';
 import '../../globalStyle.css'
 
 export default function Biography() {

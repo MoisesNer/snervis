@@ -1,20 +1,29 @@
-import about0 from './assets/about0.png'
-import about1 from './assets/about1.png'
-import about2 from './assets/about2.png'
+import about0 from '../assets/about0.png'
+import about1 from '../assets/about1.png'
+import about2 from '../assets/about2.png'
 
-import canada1 from './assets/gallery/canada1.png'
-import canada2 from './assets/gallery/canada2.png'
-import canada3 from './assets/gallery/canada3.png'
-import canada4 from './assets/gallery/canada4.png'
-import canada6 from './assets/gallery/canada6.png'
-import canada7 from './assets/gallery/canada7.png'
-import canada8 from './assets/gallery/canada8.png'
-import canada9 from './assets/gallery/canada9.png'
-import canada10 from './assets/gallery/canada10.png'
-import canada11 from './assets/gallery/canada11.png'
-import canada12 from './assets/gallery/canada12.png'
-import canada13 from './assets/gallery/canada13.png'
-import canada14 from './assets/gallery/canada14.png'
+import canada1 from '../assets/gallery/canada1.png'
+import canada2 from '../assets/gallery/canada2.png'
+import canada3 from '../assets/gallery/canada3.png'
+import canada4 from '../assets/gallery/canada4.png'
+import canada6 from '../assets/gallery/canada6.png'
+import canada7 from '../assets/gallery/canada7.png'
+import canada8 from '../assets/gallery/canada8.png'
+import canada9 from '../assets/gallery/canada9.png'
+import canada10 from '../assets/gallery/canada10.png'
+import canada11 from '../assets/gallery/canada11.png'
+import canada12 from '../assets/gallery/canada12.png'
+import canada13 from '../assets/gallery/canada13.png'
+import canada14 from '../assets/gallery/canada14.png'
+import chile1 from '../assets/gallery/chile1.png'
+import chile2 from '../assets/gallery/chile2.png'
+import chile3 from '../assets/gallery/chile3.png'
+import chile4 from '../assets/gallery/chile4.png'
+import chile5 from '../assets/gallery/chile5.png'
+import chile7 from '../assets/gallery/chile7.png'
+import chile8 from '../assets/gallery/chile8.png'
+import chile9 from '../assets/gallery/chile9.png'
+
 
 
 export const AdventureData = [
@@ -47,12 +56,20 @@ export const AdventureData = [
             canada12,
             canada13,
             canada14,
+            chile1,
+            chile2,
+            chile3,
+            chile4,
+            chile5,,
+            chile7,
+            chile8,
+            chile9,
         ],
         alt: 'Gallery Background'
     },
     {
-        hero: 'Sorry the page you\'re lookig for doesn\'t exist',
-        title: '404',
+        hero: '404',
+        title: 'Sorry the page you\'re lookig for doesn\'t exist',
         content: 'Go back home',
         images: '',
         alt: '404 Background'

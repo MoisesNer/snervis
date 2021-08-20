@@ -33,7 +33,45 @@
     font-size: 3rem;
     text-transform: uppercase;
   }
-  
+
+  /* -- ERROR PAGE -- */
+
+  .error{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    background: var(--linearImages),
+    url('https://images.unsplash.com/photo-1555861496-0666c8981751?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+  }
+  .error h1{
+    font-size: 20rem;
+  }
+  .error h3{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .error-btn{
+    margin-top: 10vh;
+    cursor: pointer;
+    background-color: transparent;
+    color: blueviolet;
+    padding: 8px 20px;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+  }
+
+/* -- END OF ERROR PAGE -- */
+
+
   .gallery {
     background: var(--linearImages),
     url('./assets/gallery.jpeg');
@@ -65,6 +103,7 @@
     color: #fff;
     font-size: 100px;
   }
+
   .update-profile{
     background: var(--linearImages),
     url('./assets/updateProfile.jpeg');
@@ -107,5 +146,12 @@
   @media screen and (max-width: 425px) {
     .biography, .forgot-password{
       font-size: 50px;
+    }
+
+    .error h1{
+      font-size: 7rem;
+    }
+    .error h3{
+      font-size: 1rem;
     }
   }

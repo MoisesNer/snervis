@@ -50,6 +50,7 @@ export default function UpdateProfile() {
             history.push('/')
         } catch {
             setLogerror('Failed to log out')
+            console.log(logerror);
         }
     }
 
