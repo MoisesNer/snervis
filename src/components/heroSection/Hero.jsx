@@ -3,6 +3,7 @@ import { Button } from '../buttons/Button'
 import './hero.css'
 import '../../App.css'
 import backvideo from './videos/video-1.mp4'
+import { Link } from 'react-router-dom'
 
 function Hero() {
     return (
@@ -13,16 +14,20 @@ function Hero() {
             <h1>SEBASTIAN ADVENTURES</h1>
             <p>Join me in my long journey</p>
             <div className="hero-btns">
+            <Link to='/international'>
                 <Button
                     className='btns' buttonStyle='btn--outline'
                     buttonSize='btn--large'
                 >Get Started</Button>
+            </Link>
+            <a href="https://www.youtube.com/watch?v=gjfUkxqDDNw">
                 <Button
                     className='btns' buttonStyle='btn--primary'
                     buttonSize='btn--large'
-                >Watch Trailer 
+                >Comming Next
                     <i className='far fa-play-circle' />
                 </Button>
+            </a>
             </div>
         </div>
     )
