@@ -11,6 +11,8 @@ import ForgotPassword from './components/Pages/ForgotPassword';
 import UpdateProfile from '../src/components/Pages/UpdateProfile';
 import { AuthProvider } from './Context';
 import Error from './components/Pages/Error';
+import  LocationInternational from './components/Pages/LocationInternational';
+import Destination from './components/Pages/Destination';
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
           <Route path='/login' exact component={Login}/>
           <Route path='/forgot-password' exact component={ForgotPassword}/>
           <Route path='/update-profile' exact component={UpdateProfile}/>
+          <Route path='/international' exact component={LocationInternational}/>
+          <Route path='/international/:slug' exact component={Destination}/>
+          <Route path='/canada/:slug' exact component={Destination}/>
           <Route component={Error}/>
         </Switch>
         <Footer/>

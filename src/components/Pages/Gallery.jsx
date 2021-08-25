@@ -1,7 +1,6 @@
 import React from 'react'
 import { AdventureData } from '../../data/AdventuresData';
 import '../../globalStyle.css'
-// import { GalleryData } from '../../GalleryData';
 
 
 export default function Gallery() {

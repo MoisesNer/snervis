@@ -1,65 +1,71 @@
 import React from 'react'
 import CardItem from './CardItem'
 import './cards.css'
+import { AdventureDetails } from '../../data/AdventuresDetailData'
 
 function Cards() {
-    return (
-        <div className='cards'>
-        <h1>SEBI Trough the World!</h1>
-        <div className='cards__container'>
-          <div className='cards__wrapper'>
-            <ul className='cards__items'>
-                <CardItem
-                  src='images/italy1.png'
-                  text='Travelling through the Mediterranean Sea, from a cruise, disembarked in ITALY Nov,2018'
-                  label='INTERNATIONAL'
-                  path='/europe'
-                />
-              <CardItem
-                src='images/spain1.png'
-                text='SEBI goes to visit his grand grandmothers in SPAIN, Nov 2018'
-                label='INTERNATIONAL'
-                path='/europe'
-              />
-            </ul>
-            <ul className='cards__items'>
-              <CardItem
-                src='images/chile2.png'
-                text='On his hut for a new Home, Sebi went to his grand homeland CHILE, Jan 2019'
-                label='INTERNATIONAL'
-                path='/latinamerica'
-              />
-              <CardItem
-                src='images/mexico1.png'
-                text='Living his first year in town visits Val`Quirico Puebla MEXICO, July 2018'
-                label='INTERNATIONAL'
-                path='/latinamerica'
-              />
-              <CardItem
-                src='images/france2.png'
-                text='Travelling through the Mediterranean Sea, from a cruise, disembarked in FRANCE, Nov 2018'
-                label='INTERNATIONAL'
-                path='/latinamerica'
-              />
-            </ul>
-            <ul className='cards__items'>
-                <CardItem
-                  src='images/canada1.png'
-                  text='Establised in Canada, Sebastian starts his career as a professional biker in 2021'
-                  label='CANADA'
-                  path='/canada'
-                /> 
-                <CardItem
-                  src='images/canada5.png'
-                  text='Hikes are his passion, visiting the three mountains that surrounds Vancouver, Winter 2020'
-                  label='CANADA'
-                  path='/canada'
-                /> 
-            </ul>
-          </div>
+
+  const { ...data } = AdventureDetails
+
+  return (
+    <div className='cards'>
+      <h1>SEBI Trough the World!</h1>
+      <div className='cards__container'>
+        <div className='cards__wrapper'>
+          <ul className='cards__items'>
+            <CardItem
+              src={data[0].images[0]}
+              text={data[0].heading}
+              label={data[0].label}
+              slug={`${data[0].label}/${data[0].slug}`}
+            />
+            <CardItem
+              src={data[1].images[0]}
+              text={data[1].heading}
+              label={data[1].label}
+              slug={`${data[1].label}/${data[1].slug}`}
+            />
+          </ul>
+
+          <ul className='cards__items'>
+            <CardItem
+              src={data[2].images[0]}
+              text={data[2].heading}
+              label={data[2].label}
+              slug={`${data[2].label}/${data[2].slug}`}
+            />
+            <CardItem
+              src={data[3].images[0]}
+              text={data[3].heading}
+              label={data[3].label}
+              slug={`${data[3].label}/${data[3].slug}`}
+            />
+            <CardItem
+              src={data[4].images[0]}
+              text={data[4].heading}
+              label={data[4].label}
+              slug={`${data[4].label}/${data[4].slug}`}
+            />
+          </ul>
+
+          <ul className='cards__items'>
+            <CardItem
+              src={data[5].images[0]}
+              text={data[5].heading}
+              label={data[5].label}
+              slug={`${data[5].label}/${data[5].slug}`}
+            />
+            <CardItem
+              src={data[6].images[0]}
+              text={data[6].heading}
+              label={data[6].label}
+              slug={`${data[6].label}/${data[6].slug}`}
+            />
+          </ul>
         </div>
       </div>
-    )
+    </div>
+  )
 }
 
 export default Cards

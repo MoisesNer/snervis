@@ -69,6 +69,12 @@
     text-decoration: none;
   }
 
+  .error-btn:hover{
+    background: var(--primary);
+    color: rgb(70, 0, 135);
+    transition: all 0.3s ease-out;
+  }
+
 /* -- END OF ERROR PAGE -- */
 
 

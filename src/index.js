@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { ProjectProvider } from './Context'
 
 ReactDOM.render(
-    <App/>,
+  <ProjectProvider>
+    <App/>
+  </ProjectProvider>,
   document.getElementById('root')
 );
 

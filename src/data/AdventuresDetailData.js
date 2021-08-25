@@ -27,8 +27,8 @@ import chile9 from '../assets/gallery/chile9.png'
 export const AdventureDetails = [
     {
         title: 'Italy',
-        path: 'eu/italy',
-        label: 'International',
+        slug: 'italy',
+        label: 'international',
         heading: 'Travelling through the Mediterranean Sea, from a cruise, disembarked in ITALY Nov,2018',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         images:[   
@@ -40,8 +40,8 @@ export const AdventureDetails = [
     },
     {
         title: 'Spain',
-        path: 'eu/spain',
-        label: 'International',
+        slug: 'spain',
+        label: 'international',
         heading: 'SEBI goes to visit his grand grandmothers in SPAIN, Nov 2018',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         images:[    
@@ -55,8 +55,8 @@ export const AdventureDetails = [
     },
     {
         title: 'Chile',
-        path: 'la/chile',
-        label: 'International',
+        slug: 'chile',
+        label: 'international',
         heading: 'On his hut for a new Home, Sebi went to his grand homeland CHILE, Jan 2019',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         images:[   
@@ -73,8 +73,8 @@ export const AdventureDetails = [
     },
     {
         title: 'Mexico',
-        path: 'la/mexico',
-        label: 'International',
+        slug: 'mexico',
+        label: 'international',
         heading: 'Living his first year in town visits Val`Quirico Puebla MEXICO, July 2018',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         images:[    
@@ -89,22 +89,22 @@ export const AdventureDetails = [
     },
     {
         title: 'France',
-        path: 'eu/france',
-        label: 'International',
+        slug: 'france',
+        label: 'international',
         heading: 'Travelling through the Mediterranean Sea, from a cruise, disembarked in FRANCE, Nov 2018',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         images:[  
-            canada3,         
-            canada4,         
             canada6,         
+            canada4,         
+            canada3,         
             canada7,           
         ] 
 
     },
     {
         title: 'Whistler',
-        path: 'ca/whistler',
-        label: 'Canada',
+        slug: 'whistler',
+        label: 'canada',
         heading: 'Establised in Canada, Sebastian starts his career as a professional biker in 2021',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         images:[   
@@ -121,8 +121,8 @@ export const AdventureDetails = [
     },
     {
         title: 'Burnaby',
-        path: 'ca/burnaby',
-        label: 'Canada',
+        slug: 'burnaby',
+        label: 'canada',
         heading: 'Hiking is his passion, visiting the three mountains that surrounds Vancouver, Winter 2020',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         images:[    

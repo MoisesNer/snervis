@@ -69,7 +69,8 @@ class ProjectProvider extends Component {
 
     componentDidMount(){
         let projects = this.formatData(AdventureDetails)
-        console.log(projects);
+
+        // console.log(projects);
 
         this.setState({
             projects,

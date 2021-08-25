@@ -60,7 +60,7 @@ export const AdventureData = [
             chile2,
             chile3,
             chile4,
-            chile5,,
+            chile5,
             chile7,
             chile8,
             chile9,

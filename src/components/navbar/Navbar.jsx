@@ -25,7 +25,7 @@ function Navbar() {
         }
     }
     
-    //BURGUER
+    //BURGER
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
     const handleClick = () => setClick(!click);
@@ -58,6 +58,12 @@ function Navbar() {
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='navbar-item'>
                             <Link to='/' className='navbar-links' onClick={closeMobileMenu}>Home</Link>
+                        </li>
+                        <li className='navbar-item'>
+                            <Link to='/international' className='navbar-links' onClick={closeMobileMenu}>International</Link>
+                        </li>
+                        <li className='navbar-item'>
+                            <Link to='/international' className='navbar-links' onClick={closeMobileMenu}>Canada</Link>
                         </li>
                         <li className='navbar-item'>
                             <Link to='/biography' className='navbar-links' onClick={closeMobileMenu}>Biography</Link>
